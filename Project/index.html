@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
   </head>
   <body>
     <div id="wrapper">
@@ -18,7 +19,7 @@
           <h2>Generate a Password</h2>
         </div>
         <div>
-          <textarea id="passwrodDisplay"
+          <textarea id="passwordDisplay"
             readonly
             placeholder="Your Secure Password"
             aria-label="Generated Password"
@@ -26,29 +27,28 @@
         </div>
         <div class ="criteria">
             <div id = "div1">
-                <input type="checkbox" id="checkbox1">
+                <input type="checkbox" id="uppercase">
                 <label for="uppercase">Include Uppercase</label>
             </div>
             <div id = "numeric">
-                <input type="checkbox" id="checkbox3">
+                <input type="checkbox" id="numbers">
                 <label for="numbers">Include Numeric</label>
             </div>
             <div id = "special Characters">
-                <input type="checkbox" id="checkbox4"> 
+                <input type="checkbox" id="symbols"> 
                 <label for="symbols">Include Special Characters</label>
             <div class="characteramount">
-                <label for="Characterbox">Select number of Characters between 8-128  </label>
-                <input type="number" id="characterbox" min="8" max="128" value="8">
+                <label for="characterbox">Select number of Characters between 8-128  </label>
+                <input type="number" id="characterbox" name="characterbox" min="8" max="128" value="8">
             </div>
             </div>
         </div>
         
         
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+          <button id="btnGenerate" class="btn" onclick="generatePassword()">Generate Password</button>
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
